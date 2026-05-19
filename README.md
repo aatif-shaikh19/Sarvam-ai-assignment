@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sarvam Edge Runtime Prototype
 
 > **IMPORTANT NOTE**
@@ -124,3 +125,6 @@ Navigate to **http://localhost:5173** to view the dashboard.
   - Transition from `npm install` to `npm ci --ignore-scripts` in build pipelines to prevent malicious `postinstall` hooks (a primary attack vector in 2025/2026).
   - Configure `.npmrc` with `min-release-age=3` to avoid zero-day malware packages.
   - Remove all Git-based dependencies (`allow-git=none`) to enforce registry-level scanning.
+=======
+# Sarvam-ai-assignment
+>>>>>>> 5307f81f6db7ce6aa302410e54df53fab94bfe95
