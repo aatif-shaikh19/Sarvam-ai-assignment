@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Styles ─────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffffff;
+  color: #18181b;
+}
+
+/* ── Scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* ── Custom Utilities ────────────────────────────── */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .panel {
+    @apply bg-white rounded-xl border border-surface-200 shadow-sm;
+  }
+
+  .panel-header {
+    @apply px-4 py-3 border-b border-surface-200 flex items-center justify-between;
+  }
+
+  .panel-body {
+    @apply p-4;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: #3b82f6;
+    animation: blink 1s step-end infinite;
+    margin-left: 1px;
+    vertical-align: text-bottom;
+  }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ── Progress Bar Fill Animation ─────────────────── */
+.progress-fill {
+  transition: width 0.15s ease-out;
+}
+
+/* ── Crash & Recovery Animations ─────────────────── */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.animate-shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+.recovering-glow {
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.2),
+              0 0 12px rgba(239, 68, 68, 0.15),
+              0 0 24px rgba(239, 68, 68, 0.05);
+}
+
+.device-failed-glow {
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.15),
+              0 0 8px rgba(239, 68, 68, 0.1);
+  animation: devicePulse 2s ease-in-out infinite;
+}
+
+@keyframes devicePulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.15), 0 0 8px rgba(239, 68, 68, 0.1); }
+  50% { box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.3), 0 0 16px rgba(239, 68, 68, 0.2); }
+}

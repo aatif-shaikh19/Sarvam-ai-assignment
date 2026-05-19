@@ -1,0 +1,15 @@
+{
+  "name": "edge-agent-runtime-backend",
+  "version": "1.0.0",
+  "description": "Edge Agent Runtime Simulator — Backend",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.2",
+    "uuid": "^10.0.0"
+  }
+}

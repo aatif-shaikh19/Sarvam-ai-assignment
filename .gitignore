@@ -1,0 +1,92 @@
+# ==============================================================================
+# Monorepo .gitignore (React + Vite Frontend | Node.js + Express Backend)
+# ==============================================================================
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+
+# ── Build & Distribution ──────────────────────────────────────────────────────
+# Frontend (Vite)
+frontend/dist/
+frontend/build/
+frontend/out/
+
+# Backend
+backend/dist/
+backend/build/
+
+# ── Environment Variables ─────────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+*.env
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── Operating System Junk ─────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ── IDEs and Editors ──────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history/
+
+# ── Testing & Coverage ────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+__snapshots__/
+
+# ── Temporary & Cache Files ───────────────────────────────────────────────────
+.eslintcache
+.stylelintcache
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.cache/
+tmp/
+temp/
+*.tmp
+
+# ── Miscellaneous ─────────────────────────────────────────────────────────────
+*.pem
+*.key
+*.cert
+*.crt
+# Ignore local workspace configs
+npm-debug.log
